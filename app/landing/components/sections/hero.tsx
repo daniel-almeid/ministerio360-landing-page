@@ -32,7 +32,7 @@ export default function Hero() {
             </Link>
 
             <Link
-              href="/login"
+              href="https://ministerio360.vercel.app/login"
               className="px-10 py-4 border border-teal-600 text-teal-700 rounded-full font-semibold hover:bg-teal-50 transition shadow-sm"
             >
               Já tenho conta

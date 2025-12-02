@@ -13,7 +13,7 @@ export default function Plans() {
 
           <Reveal>
             <div className="border rounded-2xl p-8 bg-gray-50">
-              <h3 className="text-xl font-bold text-gray-900">Free</h3>
+              <h3 className="text-xl font-bold text-gray-900">Grátis</h3>
               <p className="mt-2 text-gray-600">Para igrejas começando agora</p>
               <p className="mt-6 text-4xl font-extrabold text-gray-900">R$0</p>
 
@@ -22,7 +22,7 @@ export default function Plans() {
 
           <Reveal>
             <div className="border rounded-2xl p-8 bg-teal-50 border-teal-300">
-              <h3 className="text-xl font-bold text-teal-700">Standard</h3>
+              <h3 className="text-xl font-bold text-teal-700">Padrão</h3>
               <p className="mt-2 text-gray-600">Para igrejas em crescimento</p>
               <p className="mt-6 text-4xl font-extrabold text-teal-700">R$49</p>
             </div>
