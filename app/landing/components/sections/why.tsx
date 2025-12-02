@@ -2,7 +2,8 @@ import { CheckCircle } from "lucide-react";
 import Reveal from "../ui/reveal";
 
 const items = [
-    "Centralize membros, visitantes e ministérios em um só lugar.",
+    "Controle os membros e ministérios da sua igreja",
+    "Tenha controle e faça acompanhamento de seus visitantes",
     "Economize tempo com escalas automáticas.",
     "Melhore o acompanhamento com relatórios claros.",
     "Tenha controle financeiro fácil e organizado.",
