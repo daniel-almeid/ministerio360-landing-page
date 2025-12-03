@@ -24,10 +24,11 @@ export default function Hero() {
         <Reveal>
           <div className="mt-10 flex justify-center gap-4 flex-wrap">
             <Link
-              href="#plans"
+              href="https://wa.me/5521993547442?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20experimentar%20o%20Minist%C3%A9rio360%20por%207%20dias%20gratuitamente."
               className="px-10 py-4 bg-teal-600 text-white rounded-full font-semibold hover:bg-teal-700 transition inline-flex items-center gap-2 shadow-md hover:shadow-lg"
+              target="_blank"
             >
-              Começar gratuitamente
+              Experimente 7 dias grátis
               <ArrowRight className="w-5 h-5" />
             </Link>
 
@@ -42,7 +43,6 @@ export default function Hero() {
 
       </div>
 
-      {/* Fundo decorativo leve (não interfere no layout) */}
       <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-[700px] h-[700px] rounded-full bg-teal-100/30 blur-3xl pointer-events-none"></div>
     </section>
   );
