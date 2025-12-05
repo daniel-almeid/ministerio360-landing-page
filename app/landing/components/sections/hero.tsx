@@ -28,7 +28,7 @@ export default function Hero() {
               className="px-10 py-4 bg-teal-600 text-white rounded-full font-semibold hover:bg-teal-700 transition inline-flex items-center gap-2 shadow-md hover:shadow-lg"
               target="_blank"
             >
-              Experimente 7 dias grátis
+              Experimente 30 dias grátis
               <ArrowRight className="w-5 h-5" />
             </Link>
 
