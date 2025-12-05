@@ -24,7 +24,7 @@ export default function Hero() {
         <Reveal>
           <div className="mt-10 flex justify-center gap-4 flex-wrap">
             <Link
-              href="https://wa.me/5521993547442?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20experimentar%20o%20Minist%C3%A9rio360%20por%207%20dias%20gratuitamente."
+              href="https://wa.me/5521993547442?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20experimentar%20o%20Minist%C3%A9rio360%20por%2030%20dias%20gratuitamente."
               className="px-10 py-4 bg-teal-600 text-white rounded-full font-semibold hover:bg-teal-700 transition inline-flex items-center gap-2 shadow-md hover:shadow-lg"
               target="_blank"
             >
