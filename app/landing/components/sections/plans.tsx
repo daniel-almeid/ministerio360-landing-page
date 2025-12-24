@@ -70,10 +70,10 @@ export default function Plans() {
               </ul>
 
               <Link
-                href="https://ministerio360.vercel.app/register"
+                href="https://wa.me/5521993547442?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20experimentar%20o%20Minist%C3%A9rio360%20por%2030%20dias%20gratuitamente."
                 className="mt-8 inline-block w-full px-6 py-3 rounded-full border border-gray-300 text-gray-700 font-semibold hover:bg-gray-100 transition"
               >
-                Testar grátis
+                Testar grátis por 30 dias
               </Link>
             </div>
           </Reveal>
