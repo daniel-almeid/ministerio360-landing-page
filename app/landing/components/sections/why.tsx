@@ -2,12 +2,12 @@ import { CheckCircle } from "lucide-react";
 import Reveal from "../ui/reveal";
 
 const items = [
-    "Controle os membros e ministérios da sua igreja",
-    "Tenha controle e faça acompanhamento de seus visitantes",
-    "Economize tempo com escalas automáticas.",
-    "Melhore o acompanhamento com relatórios claros.",
-    "Tenha controle financeiro fácil e organizado.",
-    "Sistema 100% online, acessível de qualquer dispositivo.",
+    "Tenha todos os membros e ministérios organizados em um único lugar",
+    "Acompanhe visitantes e saiba exatamente quem precisa de atenção",
+    "Elimine a confusão das escalas e evite voluntários faltando",
+    "Tome decisões melhores com relatórios claros e fáceis de entender",
+    "Controle entradas e saídas sem depender de planilhas",
+    "Acesse tudo de qualquer lugar, no celular ou computador",
 ];
 
 export default function Why() {
@@ -16,7 +16,7 @@ export default function Why() {
             <div className="max-w-6xl mx-auto px-6">
                 <Reveal>
                     <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900">
-                        Por que usar o Ministério360?
+                        Tudo o que sua igreja precisa para funcionar com organização e clareza
                     </h2>
                 </Reveal>
 

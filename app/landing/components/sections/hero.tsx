@@ -9,15 +9,14 @@ export default function Hero() {
 
         <Reveal>
           <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight">
-            Administração completa para sua igreja em{" "}
+            Tenha controle total da sua igreja em um único sistema{" "}
             <span className="text-teal-600">360°</span>
           </h1>
         </Reveal>
 
         <Reveal>
           <p className="mt-6 text-gray-600 text-lg md:text-xl max-w-2xl mx-auto">
-            Um sistema moderno e intuitivo para gerenciar membros, visitantes, ministérios,
-            escalas, eventos e muito mais — tudo em um único lugar.
+            Organize membros, finanças, escalas e ministérios sem planilhas, sem bagunça e sem dor de cabeça.
           </p>
         </Reveal>
 
@@ -36,7 +35,7 @@ export default function Hero() {
               href="https://ministerio360.vercel.app/login"
               className="px-10 py-4 border border-teal-600 text-teal-700 rounded-full font-semibold hover:bg-teal-50 transition shadow-sm"
             >
-              Já tenho conta
+              Criar conta agora
             </Link>
           </div>
         </Reveal>

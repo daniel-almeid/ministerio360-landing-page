@@ -11,19 +11,19 @@ import CTA from "./landing/components/sections/cta";
 import Footer from "./landing/components/layout/footer";
 
 export default function LandingPage() {
-    return (
-        <main className="bg-gray-50">
-            <Header />
-            <Hero />
-            <Why />
-            <Features />
-
-            <Showcase />
-            <Mockup />
-            <Testimonials />
-            <Plans />
-            <CTA />
-            <Footer />
-        </main>
-    );
+  return (
+    <main className="bg-gray-50">
+      <Header />
+      <Hero />
+      <Why />
+      <Showcase />
+      <Testimonials />
+      <Features />
+      <Mockup />
+      <Plans />
+      <CTA />
+      <Footer />
+    </main>
+  );
 }
+
