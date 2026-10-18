@@ -2,18 +2,29 @@ import "./globals.css";
 import "yet-another-react-lightbox/styles.css";
 import { Inter } from "next/font/google";
 import Script from "next/script";
+import type { Metadata } from "next";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 
-export const metadata = {
-  title: "Ministério360",
-  description: "Plataforma moderna para gestão de igrejas",
+export const metadata: Metadata = {
+  metadataBase: new URL("https://lp-ministerio360.vercel.app"),
+  title: "Ministério360 | Sistema de gestão para igrejas — teste grátis por 30 dias",
+  description:
+    "Pare de perder visitantes, voluntários e o controle das finanças. Membros, visitantes, escalas, ministérios e finanças da sua igreja em um só lugar. Teste grátis por 30 dias, sem cartão.",
+  openGraph: {
+    title: "Ministério360 | Sistema de gestão para igrejas",
+    description:
+      "Organize membros, visitantes, escalas e finanças da sua igreja. 30 dias grátis, sem cartão de crédito.",
+    type: "website",
+    locale: "pt_BR",
+    images: [{ url: "/screens/dashboard.png", width: 1914, height: 908 }],
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-BR">
-      <body className={inter.className}>
+      <body className={`${inter.variable} font-sans`}>
 
         {/* META PIXEL */}
         <Script

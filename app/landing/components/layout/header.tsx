@@ -1,50 +1,60 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useState } from "react";
-import LoadingButton from "../ui/loadingButton";
+import CtaLink from "../ui/cta-link";
+import { LOGIN_URL, WA_TRIAL } from "../../lib/links";
+
+const nav = [
+  { href: "#dor", label: "Os problemas" },
+  { href: "#solucao", label: "A solução" },
+  { href: "#plans", label: "Planos" },
+  { href: "#faq", label: "Dúvidas" },
+];
 
 export default function Header() {
-    const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-    useEffect(() => {
-        const handler = () => setScrolled(window.scrollY > 20);
-        window.addEventListener("scroll", handler);
-        return () => window.removeEventListener("scroll", handler);
-    }, []);
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
-    return (
-        <header
-            className={`fixed top-0 left-0 w-full z-50 transition-all ${
-                scrolled ? "bg-white shadow-md py-3" : "bg-white/70 backdrop-blur py-5"
-            }`}
-        >
-            <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
+  return (
+    <header
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-navy-950/95 py-3 shadow-lg backdrop-blur"
+          : "bg-transparent py-5"
+      }`}
+    >
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-6">
+        <a href="#top" className="flex items-center gap-2 text-xl font-extrabold text-white">
+          <span className="grid h-8 w-8 place-items-center rounded-lg bg-teal-500 text-sm font-black">M</span>
+          Ministério<span className="text-teal-400">360</span>
+        </a>
 
-                {/* LOGO (mostrado no mobile e desktop) */}
-                <Link href="/" className="text-xl font-bold text-teal-600">
-                    Ministério360
-                </Link>
+        <nav className="hidden items-center gap-8 text-sm font-medium text-slate-200 md:flex">
+          {nav.map((n) => (
+            <a key={n.href} href={n.href} className="transition hover:text-teal-300">
+              {n.label}
+            </a>
+          ))}
+        </nav>
 
-                {/* MENU SOMENTE DESKTOP */}
-                <nav className="hidden md:flex items-center gap-8 text-gray-700 font-medium">
-                    <Link href="#features" className="hover:text-teal-600 transition">
-                        Recursos
-                    </Link>
-
-                    <Link href="#plans" className="hover:text-teal-600 transition">
-                        Planos
-                    </Link>
-
-                    <LoadingButton
-                        href="https://ministerio360.vercel.app/register"
-                        className="px-5 py-2"
-                    >
-                        Criar conta
-                    </LoadingButton>
-                </nav>
-
-            </div>
-        </header>
-    );
+        <div className="flex items-center gap-3">
+          <a
+            href={LOGIN_URL}
+            className="hidden text-sm font-medium text-slate-200 transition hover:text-white sm:block"
+          >
+            Entrar
+          </a>
+          <CtaLink href={WA_TRIAL} location="header" className="!px-5 !py-2.5 !text-sm">
+            Testar grátis
+          </CtaLink>
+        </div>
+      </div>
+    </header>
+  );
 }

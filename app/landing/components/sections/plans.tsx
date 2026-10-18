@@ -1,121 +1,98 @@
+import { Check } from "lucide-react";
 import Reveal from "../ui/reveal";
-import Link from "next/link";
+import SectionHeading from "../ui/section-heading";
+import CtaLink from "../ui/cta-link";
+import { REGISTER_URL, WA_TRIAL } from "../../lib/links";
+
+const plans = [
+  {
+    name: "Grátis",
+    desc: "Para dar os primeiros passos",
+    price: "R$0",
+    features: ["Dashboard", "Controle de membros", "Controle financeiro"],
+    cta: "Começar grátis hoje",
+    href: REGISTER_URL,
+    location: "plano_gratis",
+    highlight: false,
+  },
+  {
+    name: "Padrão",
+    desc: "Para igrejas em crescimento",
+    price: "R$49",
+    features: ["Dashboard", "Controle de membros", "Controle de visitantes", "Controle financeiro", "Relatórios"],
+    cta: "Testar grátis por 30 dias",
+    href: WA_TRIAL,
+    location: "plano_padrao",
+    highlight: false,
+  },
+  {
+    name: "Premium",
+    desc: "Para igrejas que querem controle total",
+    price: "R$89",
+    features: ["Tudo do plano Padrão", "Ministérios", "Eventos e escalas", "Relatórios avançados", "Suporte prioritário"],
+    cta: "Testar grátis por 30 dias",
+    href: WA_TRIAL,
+    location: "plano_premium",
+    highlight: true,
+  },
+];
 
 export default function Plans() {
   return (
-    <section id="plans" className="py-28 bg-white">
-      <div className="max-w-6xl mx-auto px-6 text-center">
+    <section id="plans" className="bg-white py-24 md:py-32">
+      <div className="mx-auto max-w-6xl px-6">
+        <SectionHeading
+          eyebrow="Planos"
+          title="Menos que um lanche por dia para organizar a sua igreja"
+          subtitle="Comece grátis. Teste os planos pagos por 30 dias, sem cartão de crédito."
+        />
 
-        <Reveal>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-            Escolha o plano ideal para sua igreja
-          </h2>
-        </Reveal>
-
-        <Reveal>
-          <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
-            Comece grátis e tenha acesso completo conforme sua igreja cresce.
-          </p>
-        </Reveal>
-
-        <div className="grid md:grid-cols-3 gap-8 mt-14">
-
-          <Reveal>
-            <div className="border rounded-2xl p-8 bg-gray-50 h-full flex flex-col">
-              <h3 className="text-xl font-bold text-gray-900">Grátis</h3>
-              <p className="mt-2 text-gray-600">
-                Para dar os primeiros passos
-              </p>
-
-              <p className="mt-6 text-4xl font-extrabold text-gray-900">
-                R$0
-              </p>
-
-              <ul className="mt-6 space-y-3 text-gray-700 text-left flex-1">
-                <li>• Dashboard</li>
-                <li>• Controle de membros</li>
-                <li>• Controle financeiro</li>
-              </ul>
-
-              <Link
-                href="https://ministerio360.vercel.app/register"
-                className="mt-8 inline-block w-full px-6 py-3 rounded-full border border-gray-300 text-gray-700 font-semibold hover:bg-gray-100 transition"
+        <div className="mt-16 grid items-stretch gap-8 md:grid-cols-3">
+          {plans.map((p, i) => (
+            <Reveal key={p.name} delay={i * 0.08} className="h-full">
+              <div
+                className={`relative flex h-full flex-col rounded-3xl p-8 ${
+                  p.highlight
+                    ? "border-2 border-teal-500 bg-navy-900 text-white shadow-2xl md:scale-105"
+                    : "border border-slate-200 bg-slate-50"
+                }`}
               >
-                Começar grátis hoje
-              </Link>
-            </div>
-          </Reveal>
-
-          <Reveal>
-            <div className="border rounded-2xl p-8 bg-gray-50 h-full flex flex-col">
-              <h3 className="text-xl font-bold text-gray-900">
-                Padrão
-              </h3>
-
-              <p className="mt-2 text-gray-600">
-                Para igrejas em crescimento
-              </p>
-
-              <p className="mt-6 text-4xl font-extrabold text-gray-900">
-                R$49,00
-                <span className="text-base font-medium text-gray-600"> / mês</span>
-              </p>
-
-              <ul className="mt-6 space-y-3 text-gray-700 text-left flex-1">
-                <li>• Dashboard</li>
-                <li>• Controle de membros</li>
-                <li>• Controle de visitantes</li>
-                <li>• Controle financeiro</li>
-                <li>• Relatórios</li>
-              </ul>
-
-              <Link
-                href="https://wa.me/5521993547442?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20experimentar%20o%20Minist%C3%A9rio360%20por%2030%20dias%20gratuitamente."
-                className="mt-8 inline-block w-full px-6 py-3 rounded-full border border-gray-300 text-gray-700 font-semibold hover:bg-gray-100 transition"
-              >
-                Testar grátis por 30 dias
-              </Link>
-            </div>
-          </Reveal>
-
-          <Reveal>
-            <div className="relative border-2 border-teal-600 rounded-2xl p-8 bg-teal-50 h-full flex flex-col scale-[1.03]">
-
-              <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-teal-600 text-white text-xs font-semibold px-4 py-1 rounded-full">
-                Mais escolhido
-              </span>
-
-              <h3 className="text-xl font-bold text-teal-700">
-                Premium
-              </h3>
-
-              <p className="mt-2 text-gray-700">
-                Para igrejas que querem controle total
-              </p>
-
-              <p className="mt-6 text-4xl font-extrabold text-teal-700">
-                R$89,00
-                <span className="text-base font-medium text-gray-600"> / mês</span>
-              </p>
-
-              <ul className="mt-6 space-y-3 text-teal-900 text-left flex-1">
-                <li>• Tudo do plano Padrão</li>
-                <li>• Ministérios</li>
-                <li>• Eventos e escalas</li>
-                <li>• Relatórios avançados</li>
-                <li>• Suporte prioritário</li>
-              </ul>
-
-              <Link
-                href="https://wa.me/5521993547442?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20experimentar%20o%20Minist%C3%A9rio360%20por%2030%20dias%20gratuitamente."
-                className="mt-8 inline-block w-full px-6 py-3 rounded-full bg-teal-600 text-white font-semibold hover:bg-teal-700 transition"
-              >
-                Testar grátis por 30 dias
-              </Link>
-            </div>
-          </Reveal>
-
+                {p.highlight && (
+                  <span className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-teal-500 px-4 py-1 text-xs font-bold text-white">
+                    Mais escolhido
+                  </span>
+                )}
+                <h3 className={`text-xl font-bold ${p.highlight ? "text-teal-300" : "text-navy-900"}`}>{p.name}</h3>
+                <p className={`mt-1 ${p.highlight ? "text-slate-300" : "text-slate-600"}`}>{p.desc}</p>
+                <p className="mt-6 text-5xl font-extrabold">
+                  {p.price}
+                  {p.price !== "R$0" && (
+                    <span className={`text-base font-medium ${p.highlight ? "text-slate-300" : "text-slate-500"}`}> /mês</span>
+                  )}
+                </p>
+                <ul className="mt-8 flex-1 space-y-3">
+                  {p.features.map((f) => (
+                    <li key={f} className="flex items-start gap-2">
+                      <Check className={`mt-0.5 h-5 w-5 shrink-0 ${p.highlight ? "text-teal-300" : "text-teal-600"}`} />
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+                <CtaLink
+                  href={p.href}
+                  location={p.location}
+                  variant={p.highlight ? "primary" : "ghost"}
+                  className="mt-8 w-full"
+                >
+                  {p.cta}
+                </CtaLink>
+              </div>
+            </Reveal>
+          ))}
         </div>
+        <p className="mt-8 text-center text-sm text-slate-500">
+          Sem cartão de crédito para começar o teste de 30 dias.
+        </p>
       </div>
     </section>
   );

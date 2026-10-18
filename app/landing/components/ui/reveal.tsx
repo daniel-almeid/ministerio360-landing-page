@@ -1,28 +1,25 @@
 "use client";
 
-import { motion, useAnimation } from "framer-motion";
-import { useEffect } from "react";
-import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
-export default function Reveal({ children }: { children: React.ReactNode }) {
-    const controls = useAnimation();
-    const { ref, inView } = useInView({ threshold: 0.2 });
-
-    useEffect(() => {
-        if (inView) controls.start("visible");
-    }, [controls, inView]);
-
-    return (
-        <motion.div
-            ref={ref}
-            initial="hidden"
-            animate={controls}
-            variants={{
-                hidden: { opacity: 0, y: 40 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-            }}
-        >
-            {children}
-        </motion.div>
-    );
+export default function Reveal({
+  children,
+  delay = 0,
+  className,
+}: {
+  children: React.ReactNode;
+  delay?: number;
+  className?: string;
+}) {
+  return (
+    <motion.div
+      className={className}
+      initial={{ opacity: 0, y: 28 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.15 }}
+      transition={{ duration: 0.55, delay, ease: "easeOut" }}
+    >
+      {children}
+    </motion.div>
+  );
 }
