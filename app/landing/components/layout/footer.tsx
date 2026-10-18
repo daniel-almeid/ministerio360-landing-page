@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { LOGIN_URL, REGISTER_URL, WA_DUVIDA } from "../../lib/links";
 
 export default function Footer() {
@@ -6,7 +7,7 @@ export default function Footer() {
       <div className="mx-auto grid max-w-6xl gap-10 px-6 md:grid-cols-3">
         <div>
           <p className="flex items-center gap-2 text-xl font-extrabold text-white">
-            <span className="grid h-8 w-8 place-items-center rounded-lg bg-teal-500 text-sm font-black">M</span>
+            <Image src="/logo-light.png" alt="" width={40} height={40} className="h-10 w-auto" />
             Ministério<span className="text-teal-400">360</span>
           </p>
           <p className="mt-4 max-w-xs text-sm">

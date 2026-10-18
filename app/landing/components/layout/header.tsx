@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import CtaLink from "../ui/cta-link";
 import { LOGIN_URL, WA_TRIAL } from "../../lib/links";
@@ -30,8 +31,8 @@ export default function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6">
-        <a href="#top" className="flex items-center gap-2 text-xl font-extrabold text-white">
-          <span className="grid h-8 w-8 place-items-center rounded-lg bg-teal-500 text-sm font-black">M</span>
+        <a href="#top" aria-label="Ministério360" className="flex items-center gap-2 text-xl font-extrabold text-white">
+          <Image src="/logo-light.png" alt="" width={40} height={40} className="h-10 w-auto" priority />
           Ministério<span className="text-teal-400">360</span>
         </a>
 
