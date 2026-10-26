@@ -23,7 +23,7 @@ export default function CTA() {
             href="https://ministerio360.vercel.app/register"
             className="mt-10 inline-block px-10 py-4 bg-white text-teal-700 rounded-full font-semibold hover:bg-gray-100 transition"
           >
-            Testar grátis por 30 dias
+            Testar grátis por 14 dias
           </Link>
         </Reveal>
 
