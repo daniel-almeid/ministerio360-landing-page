@@ -91,7 +91,7 @@ export default function Plans() {
           ))}
         </div>
         <p className="mt-8 text-center text-sm text-slate-500">
-          Sem cartão de crédito para começar o teste de 30 dias.
+          Sem cartão de crédito para começar o teste de 14 dias.
         </p>
       </div>
     </section>
