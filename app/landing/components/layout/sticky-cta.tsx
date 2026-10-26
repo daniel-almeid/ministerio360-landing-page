@@ -24,7 +24,7 @@ export default function StickyCta() {
         }`}
       >
         <CtaLink href={WA_TRIAL} location="sticky_mobile" className="w-full">
-          Testar 30 dias grátis
+          Testar 14 dias grátis
         </CtaLink>
         <p className="mt-1.5 text-center text-[11px] text-slate-400">Sem cartão de crédito</p>
       </div>
