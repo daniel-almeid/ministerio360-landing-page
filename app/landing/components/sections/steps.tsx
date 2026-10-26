@@ -2,7 +2,7 @@ import Reveal from "../ui/reveal";
 import SectionHeading from "../ui/section-heading";
 
 const steps = [
-  { n: "1", title: "Crie sua conta", text: "Em poucos minutos, sem cartão de crédito. São 30 dias para testar com calma." },
+  { n: "1", title: "Crie sua conta", text: "Em poucos minutos, sem cartão de crédito. São 14 dias para testar com calma." },
   { n: "2", title: "Cadastre sua igreja", text: "Adicione membros, ministérios e visitantes. Você já enxerga tudo organizado." },
   { n: "3", title: "Passe a ter controle", text: "Escalas, finanças e relatórios funcionando. Você volta a cuidar de pessoas." },
 ];
