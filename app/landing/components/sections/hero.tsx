@@ -4,7 +4,7 @@ import CtaLink from "../ui/cta-link";
 import Reveal from "../ui/reveal";
 import { REGISTER_URL, WA_TRIAL } from "../../lib/links";
 
-const trust = ["30 dias grátis", "Sem cartão de crédito", "Comece em poucos minutos"];
+const trust = ["14 dias grátis", "Sem cartão de crédito", "Comece em poucos minutos"];
 
 export default function Hero() {
   return (
