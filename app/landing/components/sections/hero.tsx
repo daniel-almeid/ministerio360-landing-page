@@ -39,7 +39,7 @@ export default function Hero() {
         <Reveal delay={0.15}>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <CtaLink href={WA_TRIAL} location="hero_primary" className="w-full !px-9 !py-4 !text-lg sm:w-auto">
-              Testar 30 dias grátis
+              Testar 14 dias grátis
               <ArrowRight className="h-5 w-5" />
             </CtaLink>
             <CtaLink href={REGISTER_URL} location="hero_secondary" variant="outline" className="w-full !py-4 sm:w-auto">
